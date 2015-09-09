@@ -21,3 +21,12 @@ def vector_add(v1, v2):
     if len(v1) != len(v2):
         raise ShapeException
     return [sum(x) for x in zip(v1, v2)]
+
+""" Vector subtraction """
+def vector_sub(v1, v2):
+
+    if len(v1) != len(v2):
+        raise ShapeException
+    return [ v1 - v2 for v1, v2 in zip(v1, v2)]
+
+"""Vector multiplication by Scalar"""
