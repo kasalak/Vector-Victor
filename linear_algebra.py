@@ -16,5 +16,5 @@ def shape(vector):
 
 """Vector addition"""
 
-def vector_add(vector1, vector2):
-    return sum(vector1, vector2) 
+def vector_add(v1, v2):
+    return [sum(x) for x in zip(v1, v2)]

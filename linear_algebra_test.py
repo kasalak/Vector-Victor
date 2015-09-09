@@ -17,14 +17,14 @@ u = [1, 1, 1]
 y = [10, 20, 30]
 z = [0, 0, 0]
 
-#
-# def test_shape_vectors():
-#     """shape should take a vector or matrix and return a tuple with the
-#     number of rows (for a vector) or the number of rows and columns
-#     (for a matrix.)"""
-#     assert shape(m) == (2,)
-#     assert shape(v) == (3,)
-#     assert shape([1]) == (1,)
+
+def test_shape_vectors():
+    """shape should take a vector or matrix and return a tuple with the
+    number of rows (for a vector) or the number of rows and columns
+    (for a matrix.)"""
+    assert shape(m) == (2,)
+    assert shape(v) == (3,)
+    assert shape([1]) == (1,)
 
 
 def test_vector_add():
@@ -36,12 +36,12 @@ def test_vector_add():
     assert vector_add(v, w) == [1, 5, 4]
     assert vector_add(u, y) == [11, 21, 31]
     assert vector_add(u, z) == u
-#
-#
-# def test_vector_add_is_commutative():
-#     assert vector_add(w, y) == vector_add(y, w)
-#
-#
+
+
+def test_vector_add_is_commutative():
+    assert vector_add(w, y) == vector_add(y, w)
+
+
 # @raises(ShapeException)
 # def test_vector_add_checks_shapes():
 #     """Shape rule: the vectors must be the same size."""
