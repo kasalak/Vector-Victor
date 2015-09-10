@@ -32,15 +32,15 @@ def vector_sub(v1, v2):
 
 """ Vector sum of n vectors """
 
-def vector_sum(v1, *args):
+def vector_sum(*args):
     for arg in args:
         if len(arg) != len(args[0]):
             raise ShapeException
-    return [sum(arg) for arg in zip(v1, *args)]
+    return [sum(arg) for arg in zip(*args)]
 
 """Vector multiplication by Scalar"""
-def vector_multiply(v1,N):
-    return [arg * N for arg in v1]
+def vector_multiply(vec,sca):
+    return [arg * sca for arg in vec]
 
 """Dot product"""
 def dot(v1, v2):
@@ -53,5 +53,7 @@ def vector_mean(*args):
     return [(sum(arg)/len(args)) for arg in zip(*args)]
 
 """Magnitude"""
-def magnitude():
-    return math.sqrt(dot(v1, v2))
+
+def magnitude(vec):
+
+    return  math.sqrt(dot(vec, vec))
