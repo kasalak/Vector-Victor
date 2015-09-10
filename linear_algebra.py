@@ -1,3 +1,5 @@
+import math
+
 class ShapeException(Exception):
     pass
 
@@ -31,6 +33,7 @@ def vector_sub(v1, v2):
 """ Vector sum of n vectors """
 
 def vector_sum(v1, *args):
+
     return [sum(x) for x in zip(v1, *args)]
 
 """Vector multiplication by Scalar"""
@@ -44,7 +47,9 @@ def dot(v1, v2):
     return sum([a*b for (a, b) in zip(v1, v2)])
 
 """Vector Mean"""
-def vector_mean(v1, *args):
-    n = [*args]
-    return vector_sum(v1, *args) / len(n) in zip(v1, *args)
+def vector_mean(*args):
+    return [(sum(x)/len(args)) for x in zip(*args)]
+
 """Magnitude"""
+def magnitude():
+    return math.sqrt(dot(v1, v2))
